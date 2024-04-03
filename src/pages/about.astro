@@ -1,0 +1,53 @@
+---
+import Layout from "../layouts/DefaultLayout.astro";
+import { PageHeader } from "@/components/PageHeader";
+---
+
+<Layout
+  title="About BobDylan's RPG MO Site"
+  keys="rpg mo"
+  desc="About RPGMOBOB.com"
+>
+  <main class="p-4 container max-w-3xl">
+    <PageHeader>About RPGMOBOB.com</PageHeader>
+    <p class="my-4">
+      RPGMOBOB.com is a site for the <a href="https://mo.ee">RPG MO</a> game, built
+      by player/moderator "bobdylan" (no relation to the well known singer, just
+      a fan.)
+    </p>
+    <p class="my-4">
+      This latest version (version 3) of the site is built using:
+    </p>
+    <ul>
+      <li>
+        <a href="https://astro.build/" target="_blank">AstroJS</a>
+      </li>
+      <li>
+        <a href="https://reactjs.org/" target="_blank">React</a>
+      </li>
+      <li>
+        <a href="https://tailwindcss.com/" target="_blank">Tailwind CSS</a>
+      </li>
+      <li>
+        <a href="https://github.com/shadcn/ui" target="_blank">Shadcn UI</a>
+      </li>
+    </ul>
+    <p class="my-4">
+      I expect there will be some that don't care for the redesign, but the
+      previous site was built using Quasar for Vue, and I have moved away from
+      Vue for the most part. ShadCN UI is an excellent TailwindCSS component
+      "library" that can be greatly customised and offers excellent disability
+      support. AstroJS, in this case, is a Static Site Generator, meaning the
+      site is built programatically into static HTML from dynamic (javascript)
+      code. This means the site is super fast, and can be hosted on a static
+      site host like Vercel, Netlify, or Github Pages, and I can drop the API
+      server completely.
+    </p>
+    <p class="my-4">
+      I am by no means done with styling the site, and am open to input. Please
+      hit me up on Discord in a DM. (ask a moderator in game how if you don't
+      know.)
+    </p>
+    <p class="my-4">-bobdylan</p>
+  </main>
+</Layout>

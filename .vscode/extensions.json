@@ -1,0 +1,22 @@
+{
+  "recommendations": [
+    "astro-build.astro-vscode",
+    "sheltonlouis.astro-snippets",
+    "formulahendry.auto-close-tag",
+    "formulahendry.auto-rename-tag",
+    "dzannotti.vscode-babel-coloring",
+    "aaron-bond.better-comments",
+    "veroxyle.shadcn-ui-snippets",
+    "steoates.autoimport",
+    "dbaeumer.vscode-eslint",
+    "zignd.html-css-class-completion",
+    "esbenp.prettier-vscode",
+    "yoavbls.pretty-ts-errors",
+    "sohanemon.shadcn-wizard",
+    "suhelmakkad.shadcn-ui",
+    "bradlc.vscode-tailwindcss",
+    "eamodio.gitlens",
+    "donjayamanne.githistory"
+  ],
+  "unwantedRecommendations": []
+}

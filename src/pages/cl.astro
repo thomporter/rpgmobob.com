@@ -1,0 +1,12 @@
+---
+import Layout from "../layouts/DefaultLayout.astro";
+import { CLCalculator } from "../components/CLCalculator";
+import { PageHeader } from "@/components/PageHeader";
+---
+
+<Layout title="BobDylan's RPG MO Bobo Site" keys="rpg mo" desc="...">
+  <main class="p-4">
+    <PageHeader>Combat Level Calculator</PageHeader>
+    <CLCalculator client:load />
+  </main>
+</Layout>

@@ -1,0 +1,35 @@
+---
+import MainNav from "./MainNav.astro";
+import { MobileNav } from "./MobileNav";
+import { ModeToggle } from "./ModeToggle";
+import { RandomModerator } from "./RandomModerator";
+import mods from "@/lib/moderators";
+import { Icons } from "./icons";
+const initial = mods[Math.floor(Math.random() * mods.length)];
+---
+
+<header
+  class="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
+>
+  <div class="flex h-14 max-w-screen-2xl items-center">
+    <MobileNav client:load />
+    <a href="/" class="mr-6 flex items-center space-x-2">
+      <div class="w-16">
+        <RandomModerator mods={mods} initial={initial} client:load />
+      </div>
+      <span class="font-bold inline-block"> RPGMOBOB.com </span>
+    </a>
+    <MainNav />
+    <div
+      class="flex flex-grow items-center justify-between space-x-2 md:justify-end"
+    >
+      <nav class="flex gap-2 items-center justify-end w-full">
+        <a href="/about" class="hidden md:block">About</a>
+        <a href="https://github.com/thomporter/rpgmobob.com"
+          ><Icons.gitHub className="w-6 h-6" /></a
+        >
+        <ModeToggle client:load />
+      </nav>
+    </div>
+  </div>
+</header>

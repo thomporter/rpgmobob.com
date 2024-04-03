@@ -1,0 +1,65 @@
+---
+import DefaultLayout from "@/layouts/DefaultLayout.astro";
+import worldMapData from "@/lib/worldMapData";
+
+const maps = worldMapData.map((o) => {
+  if (o.img) o.full = o.img.replace(/-sm.gif$/, ".png");
+  return o;
+});
+---
+
+<DefaultLayout
+  title="RPG MO World Map"
+  bodyClass="select-none"
+  desc="An interactive world map for RPG MO. Click on an area to view a larger version."
+>
+  <svg viewBox="0 0 1658 960">
+    <image
+      xlink:href="https://res.cloudinary.com/rpgmobob/image/upload/v1551917219/maps/world_map_2021_march.png"
+      x="0"
+      y="0"
+      height="100%"
+      width="100%"
+    />
+
+    {
+      maps.map((area) => {
+        if (area.href) {
+          return (
+            // @ts-ignore TS doesn't like xlink:href
+            <a xlink:href={area.href} title={area.name}>
+              <polygon
+                name={area.name}
+                points={area.coords}
+                fill="transparent"
+              />
+            </a>
+          );
+        } else {
+          return (
+            // @ts-ignore
+            <a
+              xlink:href={`#${area.name}`}
+              data-fslightbox={area.name.replace(/[^a-z0-9]/gi, "-")}
+              href={
+                "https://res.cloudinary.com/rpgmobob/image/upload/v1551917219/maps/" +
+                area.img
+              }
+              class="map-poly"
+              id={area.name.replace(/[^a-z0-9]/gi, "-")}
+              title={area.name}
+            >
+              <polygon
+                name={area.name}
+                points={area.coords}
+                fill="transparent"
+              />
+            </a>
+          );
+        }
+      })
+    }
+  </svg>
+</DefaultLayout>
+
+<script is:inline src="/fslightbox.min.js"></script>

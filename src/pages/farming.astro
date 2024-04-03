@@ -1,0 +1,16 @@
+---
+import { PageHeader } from "@/components/PageHeader";
+import DefaultLayout from "@/layouts/DefaultLayout.astro";
+import { FarmingApp } from "@/components/FarmingApp";
+---
+
+<DefaultLayout
+  title="Bobdylan's RPG MO Farming App"
+  desc="A small app to search farming data in RPG MO, including seeds, where to buy them, what they grow, and where to sell the havests."
+  keys="rpgmo,farming"
+>
+  <div class="container">
+    <PageHeader>Bobdylan's RPG MO Farming App</PageHeader>
+    <FarmingApp client:load />
+  </div>
+</DefaultLayout>

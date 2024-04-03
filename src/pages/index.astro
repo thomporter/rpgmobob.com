@@ -1,0 +1,12 @@
+---
+import Layout from "../layouts/DefaultLayout.astro";
+import { HomeLinks } from "../components/HomeLinks";
+import { PageHeader } from "@/components/PageHeader";
+---
+
+<Layout title="BobDylan's RPG MO Bobo Site" keys="rpg mo" desc="...">
+  <main class="p-4">
+    <PageHeader>Useful Links for RPG MO</PageHeader>
+    <HomeLinks client:load />
+  </main>
+</Layout>

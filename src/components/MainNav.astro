@@ -1,0 +1,70 @@
+---
+import { cn } from "@/lib/utils";
+// import { RandomModerator } from "./RandomModerator";
+
+const { pathname } = Astro.props;
+---
+
+<div class="mr-4 hidden md:flex">
+  <nav class="flex items-center gap-4 text-sm lg:gap-6">
+    <a
+      href="https://modb.rpgmobob.com"
+      class="transition-colors text-foreground/60 hover:text-foreground/80"
+    >
+      MODB
+    </a>
+    <a
+      href="/world-map"
+      class={cn(
+        "uppercase transition-colors hover:text-foreground/80",
+        pathname?.startsWith("/world-map")
+          ? "text-foreground"
+          : "text-foreground/60"
+      )}
+    >
+      World Map
+    </a>
+    <a
+      href="/fishing"
+      class={cn(
+        "uppercase transition-colors hover:text-foreground/80",
+        pathname?.startsWith("/fishing")
+          ? "text-foreground"
+          : "text-foreground/60"
+      )}
+    >
+      Fishing
+    </a>
+    <a
+      href="/farming"
+      class={cn(
+        "uppercase transition-colors hover:text-foreground/80",
+        pathname?.startsWith("/farming")
+          ? "text-foreground"
+          : "text-foreground/60"
+      )}
+    >
+      Farming
+    </a>
+    <a
+      href="/fungiculture"
+      class={cn(
+        "uppercase transition-colors hover:text-foreground/80",
+        pathname?.startsWith("/fungiculture")
+          ? "text-foreground"
+          : "text-foreground/60"
+      )}
+    >
+      Fungiculture
+    </a>
+    <a
+      href="/cl"
+      class={cn(
+        "uppercase transition-colors hover:text-foreground/80",
+        pathname?.startsWith("/cl") ? "text-foreground" : "text-foreground/60"
+      )}
+    >
+      CL
+    </a>
+  </nav>
+</div>

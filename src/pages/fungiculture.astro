@@ -1,0 +1,16 @@
+---
+import { PageHeader } from "@/components/PageHeader";
+import DefaultLayout from "@/layouts/DefaultLayout.astro";
+import { FungiApp } from "@/components/FungiApp";
+---
+
+<DefaultLayout
+  title="Bobdylan's RPG MO Fungiculture App"
+  desc="An app for Growing Mushrooms in RPG MO"
+  keys="rpgmo,fungiculture"
+>
+  <div class="container">
+    <PageHeader>Bobdylan's RPG MO Fungiculture App</PageHeader>
+    <FungiApp client:load />
+  </div>
+</DefaultLayout>
