@@ -2,6 +2,8 @@
 
 A website dedicated to all things [RPG MO](https://mo.ee), developed by player "bobdylan" (no relation to the singer, just a fan) and recently re-written in AstroJS and published here for the community to contribute.
 
+Note: Currently the fruits of the repository live at [beta.rpgmobob.com](https://beta.rpgmobob.com). Once I get enough feedback that things work well enough, I will move it to "www".
+
 ## Dependencies/What's Used
 
 - [Node](https://nodejs.org/)
