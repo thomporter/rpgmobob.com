@@ -1,5 +1,6 @@
 # build output
-dist/
+# dist/ ## Removed for GH Pages
+
 # generated types
 .astro/
 
